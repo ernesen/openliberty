@@ -123,6 +123,25 @@ docker kill mytestdb
 docker rm mytestdb
 ```
 
+## build and run the app
+
+```
+chmod +x ./run
+./run
+```
+
+## test the app
+
+This is working
+```
+http://localhost:5000/Hello_World/
+```
+
+This is not working - debugging it
+```
+http://localhost:5000/Hello_World/TestDb
+```
+
 # References
 - ms sql [dockerhub](https://hub.docker.com/r/microsoft/mssql-server-linux/)
 - [deploying](https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_dep.html) application in Liberty
