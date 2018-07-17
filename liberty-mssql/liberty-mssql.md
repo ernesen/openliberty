@@ -85,5 +85,46 @@ Bay View                                                         Erie           
 (3 rows affected)
 ```
 
+
+# Deploy application
+
+## build the docker image
+```
+docker build -t mstestdb .
+```
+
+## run the image
+```
+docker run --name mytestdb -d -p 5000:9080 -p 5443:9443 mstestdb 
+```
+
+## list running container
+```
+docker ps
+```
+or
+
+```
+docker ps -a
+```
+
+## interactive console in docker container
+```
+docker exec -it mytestdb /bin/bash
+```
+
+## stop the container
+```
+docker kill mytestdb
+```
+
+## remove the container image
+```
+docker rm mytestdb
+```
+
 # References
 - ms sql [dockerhub](https://hub.docker.com/r/microsoft/mssql-server-linux/)
+- [deploying](https://www.ibm.com/support/knowledgecenter/en/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/twlp_dep.html) application in Liberty
+- Using the configuration [dropins](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_setup_dropins.html) folder to specify server configuration
+- [Creating the Docker container for your applications](https://www.ibm.com/support/knowledgecenter/en/SSEQTP_liberty/com.ibm.websphere.wlp.doc/ae/twlp_icp_docker.html)

@@ -1,0 +1,4 @@
+docker kill mytestdb
+docker rm mytestdb
+docker build -t mstestdb .
+docker run --name mytestdb -d -p 5000:9080 -p 5443:9443 mstestdb 
