@@ -132,14 +132,19 @@ chmod +x ./run
 
 ## test the app
 
-This is working
+This shows the websphere home page
 ```
-http://localhost:5000/Hello_World/
+http://localhost:5000/
+```
+
+This shows the Hello World servlet sample where it will shows greeting based on time of day
+```
+http://localhost:5000/jeemssql
 ```
 
 This is not working - debugging it
 ```
-http://localhost:5000/Hello_World/TestDb
+http://localhost:5000/jeemssql/TestDb
 ```
 
 # References

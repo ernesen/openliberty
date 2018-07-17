@@ -18,19 +18,17 @@
     <!-- Automatically expand WAR files and EAR files -->
     <applicationManager autoExpand="true" />
 
-
     <applicationMonitor updateTrigger="mbean" />
 
-    <webApplication contextRoot="hello_world" id="hello world" location="hello world.war" name="hello world" />
-
-    <enterpriseApplication id="Hello WorldEAR" location="Hello WorldEAR.ear" name="Hello WorldEAR" />
+    <enterpriseApplication id="jeemssql" location="jeemssqlEAR.ear" name="jeemssql" />
 
     <dataSource id="DefaultDataSource" jndiName="jdbc/mssqlserver">
         <jdbcDriver libraryRef="MSJDBCLib" />
-        <properties.microsoft.sqlserver databaseName="test" serverName="localhost" portNumber="1433" user="sa" password="password!23"/>
+        <properties.microsoft.sqlserver databaseName="test" serverName="localhost" portNumber="1433" user="sa" password="password!23" />
     </dataSource>
 
     <library id="MSJDBCLib">
-        <file name="/opt/ibm/wlp/usr/shared/resources/" />
+        <fileset dir="/config/" includes="mssql-jdbc-6.4.0.jre8.jar"/>
+        <!-- <file name="/config/mssql-jdbc-6.4.0.jre8.jar" /> -->
     </library>
 </server>
